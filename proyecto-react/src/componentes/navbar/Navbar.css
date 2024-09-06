@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    align-items: center;
+    background-color: #e9d5da;
+
+}
+.navbar-links {
+    margin-right: 10px;
+   list-style: none;
+   display: flex;
+}
+.navbar-items{
+    margin-right: 20px;
+}
+.navbar-items a {
+    text-decoration: none;
+    color: black ;
+}
+.navbar-items a:hover {
+    color: cornsilk;
+
+}
+.carrito {
+    position: relative; 
+    display: inline-block;
+   
+}
+.placa {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    background-color: red; 
+    color: white;
+    border-radius: 50%; 
+    padding: 5px 8px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.logo{
+   margin-right: 700px;
+
+}
