@@ -23,6 +23,9 @@ function Navbar() {
             <li className='navbar-items'>
                 <a href="">Jardin</a>
             </li>
+            <li className='navbar-items'>
+                <a href="">Baños</a>
+            </li>
         </ul>
         <CardWidget   className ='carrito'    />
     </nav>
