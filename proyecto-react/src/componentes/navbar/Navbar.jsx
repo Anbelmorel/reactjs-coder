@@ -1,6 +1,7 @@
 import React from 'react'
 import CardWidget from '../cardwidget/CardWidget'
 import './Navbar.css'
+import { Link, Outlet } from 'react-router-dom'
 
 
 function Navbar() {
@@ -12,23 +13,25 @@ function Navbar() {
         </div>
         <ul className='navbar-links'>
             <li className='navbar-items'>
-                <a href="">Inicio</a>
+                <Link to="/category/muebles">Muebles</Link>
             </li>
             <li className='navbar-items'>
-                <a href="">Decoraciones</a>
+                <Link to="/category/jardin">Jardin</Link>
             </li>
             <li className='navbar-items'>
-                <a href="">Muebles</a>
+                <Link to="/category/decoraciones">Decoraciones</Link>
             </li>
             <li className='navbar-items'>
-                <a href="">Jardin</a>
-            </li>
-            <li className='navbar-items'>
-                <a href="">Baños</a>
+                <Link to="/category/baños">Baños</Link>
+                
             </li>
         </ul>
-        <CardWidget   className ='carrito'    />
+        <CardWidget   className ='carrito' />
+        
+        <Outlet/>
+
     </nav>
+    
     </>
 
   )

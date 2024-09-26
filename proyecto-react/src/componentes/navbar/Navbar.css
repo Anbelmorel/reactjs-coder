@@ -3,14 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .navbar{
     height: 100px;
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: right;
     align-content: center;
     align-items: center;
-    background-color: #e9d5da;
+    background-color: #f7f7f7;
+    border-bottom: 2px dotted #666666;
+
 
 }
 .navbar-links {
@@ -22,11 +26,32 @@
     margin-right: 20px;
 }
 .navbar-items a {
+    position: relative;
     text-decoration: none;
     color: black ;
 }
-.navbar-items a:hover {
-    color: cornsilk;
+.navbar-items a::after {
+
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background-color:#e74c3c;  
+    transform: scaleY(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-items a:hover::after {
+    color:#e74c3c;
+    text-decoration: underline;
+    transform: scaleY(1);
+
+}
+.navbar-items a:hover{
+    color: #e74c3c;
+    
 
 }
 .carrito {
