@@ -36,6 +36,7 @@
     font-weight: bold; 
     color: #e63946; 
     margin: 10px 0; 
+    
 }
 
 .boton-item {
@@ -51,4 +52,21 @@
 }
 .boton-item:hover{
     background-color: #1d3557;
+}
+
+.botonMenosMas {
+    height: 40px;
+    width: 40px;
+}
+.quantity{
+    width:60px;
+    text-align: center;
+
+}
+.quantity-controls{
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(119, 116, 116);
 }

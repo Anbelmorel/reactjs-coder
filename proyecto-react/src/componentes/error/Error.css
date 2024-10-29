@@ -1,0 +1,45 @@
+.fondo{
+    background-image: url(../../../public/ByzM.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.text-conteiner{
+    padding: 20px;
+    position: absolute;
+    margin-left: 50px;
+    right: 50px;
+
+}
+
+.titulo{
+    font-size: 100px;
+    color: gold;
+}
+.subtitulo{
+    font-size: 50px;
+    color: gold;
+}
+.parrafo{
+    font-size: 25px;
+    color: gold;
+}
+@keyframes parpadea {
+    0% { color: gold; }   
+    50% { color: black; }
+    75%{color: gold;}
+    100%{color: black;}
+
+}
+
+.titulo, .subtitulo, .parrafo {
+    animation: parpadea 6s infinite; 
+}

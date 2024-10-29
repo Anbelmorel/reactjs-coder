@@ -1,9 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import getApi from '../data/productos';
 import './Items.css';
 import ItemList from './ItemList';
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 
 
 
@@ -14,17 +14,25 @@ function ItemsListConteiner () {
 
   useEffect(() => {
 
-    getApi
-      .then((respuesta) => {
-        if (categoryId){
-          const newproductos = respuesta.filter((producto)=>producto.categoria === categoryId)
-          setProductos(newproductos)
-        }else{
-          setProductos(respuesta)
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+
+    const q = categoryId ? query(itemsCollection, where("categoria", "==", categoryId)) : itemsCollection;
+
+    getDocs(q)
+      .then((snapshot) => {
+        if (snapshot.size === 0) {
+          console.log("No hay elementos en esta categoría.");
+        } else {
+          const itemsList = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setProductos(itemsList);
         }
       })
       .catch((error) => {
-        console.error(error);
+        console.error("Error al obtener los elementos: ", error);
       });
 
   }, [categoryId]);

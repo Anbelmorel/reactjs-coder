@@ -6,9 +6,9 @@ function Item({ producto }) {
   
   return (
     <div className='tarjeta'>
-        <img className='imagen-tarjeta' src={producto.img} alt={producto.nombre} />
-        <Link className='descripcion-tarjeta' to={`/detail/${producto.id} `}>{producto.descripcion}</Link>
-        <p className='precio-tarjeta'>Precio: ${producto.precio}</p>
+        <img className='imagen-tarjeta' src={producto.imageId} alt={producto.title} />
+        <Link className='descripcion-tarjeta' to={`/detail/${producto.id} `}>{producto.description}</Link>
+        <p className='precio-tarjeta'>Precio: ${producto.price}</p>
     </div>
   )
 }

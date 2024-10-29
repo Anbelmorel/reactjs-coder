@@ -9,8 +9,11 @@ function Navbar() {
     <>
     <nav className='navbar'>
         <div className='logo'>
-            <h2>EleganciaEnCasa</h2>
+          <Link to="/" className='enlace'>
+             <h2>EleganciaEnCasa</h2>
+          </Link>
         </div>
+
         <ul className='navbar-links'>
             <li className='navbar-items'>
                 <Link to="/category/muebles">Muebles</Link>
